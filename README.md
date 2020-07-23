@@ -1,1 +1,4 @@
-Bootstrap website generated using [this](https://startbootstrap.com/template-overviews/resume/) theme
+Bootstrap website generated using:
+
+*	[Theme](https://startbootstrap.com/template-overviews/resume/)
+* 	[Color Palette](https://www.schemecolor.com/telefonica-web-site-colors.php)

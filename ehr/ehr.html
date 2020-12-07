@@ -52,7 +52,7 @@
 
 		body {
 			padding-top: 70px;
-			overflow: auto;
+			overflow: hidden;
 		}
 
 		.vertical-center {
@@ -331,7 +331,7 @@
 				// If checked
 				if (this.checked) {
 					var settings = {
-						"url": "https://ehr-relation-extraction.ue.r.appspot.com/sample/",
+						"url": "http://127.0.0.1:8000/sample/",
 						"method": "GET",
 						"headers": {
 							"Content-Type": "application/json"
@@ -371,7 +371,7 @@
 				l.start();
 
 				var settings = {
-					"url": "https://ehr-relation-extraction.ue.r.appspot.com/",
+					"url": "http://127.0.0.1:8000/",
 					"method": "POST",
 					"headers": {
 						"Content-Type": "application/json"
@@ -418,21 +418,19 @@
 
 
 			$(document).on("mouseenter", "#taggedEhr span", function() {
+			    console.log("Hovered");
 				var relGroup = $(this).attr("class").split(' ');
 				for (grp of relGroup){
-					try {
-						$("." + grp).css("border", "2px solid red");
-					} catch (e) {}
+					$("." + grp).css("border", "2px solid red");
 				}
 			});
 
 			$(document).on("mouseleave", "#taggedEhr span", function() {
+			    console.log("Remove hover");
 			    var relGroup = $(this).attr("class").split(' ');
 				for (grp of relGroup){
-					try {
-						$("." + grp).css("border", "");
-						$("." + grp).css("border-bottom", "1px dotted black");
-					} catch (e) {}
+					$("." + grp).css("border", "");
+					$("." + grp).css("border-bottom", "1px dotted black");
 				}
 			});
 		});
